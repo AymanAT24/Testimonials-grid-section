@@ -1,3 +1,10 @@
+:root {
+  --cards-main-padding: 30px;
+  --main-border-radius: 6px;
+  --high-opacity: 0.9;
+  --low-opacity: 0.7;
+  --main-line-height: 1.4;
+}
 * {
   font-family: "Barlow Semi Condensed", sans-serif;
   margin: 0;
@@ -19,31 +26,39 @@ body {
   margin-bottom: 60px;
   padding: 20px;
 }
+.grid-parent > div {
+  padding: var(--cards-main-padding);
+  border-radius: var(--main-border-radius);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .daniel {
   grid-column: 1 / span 2;
   background-color: #733fc8;
-  padding: 40px 50px;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  position: relative;
-  overflow: hidden;
 }
 .daniel .quotes {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   position: absolute;
-  right: 65px;
-  top: -14px;
+  right: 50px;
   border: none;
-  opacity: 0.3;
+  opacity: 0.4;
+  top: -10px;
+}
+.daniel .second-p.light-p,
+.patrick .second-p.light-p,
+.jeanette .second-p.dark-p {
+  font-size: 18px;
+  line-height: var(--main-line-height);
+  opacity: var(--low-opacity);
 }
 .user-info {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .user-info img {
   border-radius: 50%;
@@ -52,125 +67,106 @@ body {
   width: 40px;
   height: 40px;
 }
+.jeanette h3,
 .name h3 {
-  color: white;
+  color: #fff;
   font-weight: 600;
+  opacity: var(--high-opacity);
 }
 .name h5 {
   color: white;
   font-weight: 500;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .first-p.light-p {
   color: #fff;
   font-weight: 600;
   margin-bottom: 14px;
-  font-size: 26px;
+  font-size: 28px;
 }
 .second-p.light-p {
   color: white;
-  opacity: 0.7;
-  font-size: 17px;
+  opacity: 0.6;
   margin-bottom: 18px;
 }
 .jonathan {
   grid-column: 3 / span 1;
   background-color: #49556b;
-  padding: 40px 50px;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
 }
 .jonathan .second-p.light-p {
-  font-size: 19px;
+  font-size: 20px;
 }
 .kira {
   grid-column: 4 / span 1;
   background-color: #ffffff;
-  padding: 40px 50px;
   grid-row: 1 / span 2;
-  border-radius: 6px;
 }
 .kira img {
   border: 4px solid rgba(159, 158, 158, 0.411);
 }
 .kira .name h3 {
   color: hsl(219, 29%, 14%);
-  font-weight: 600;
-  opacity: 0.8;
+  opacity: var(--high-opacity);
 }
 .kira .name h5 {
   color: hsl(219, 29%, 14%);
   font-weight: 500;
-  opacity: 0.6;
+  opacity: var(--low-opacity);
 }
 .kira .first-p.dark-p {
-  color: hsl(219, 29%, 14%);
+  color: #19212e;
+  opacity: var(--high-opacity);
   font-weight: 600;
-  opacity: 0.8;
   margin-bottom: 14px;
   font-size: 24px;
-  line-height: 1.4;
 }
 .kira .second-p.dark-p {
-  color: hsl(219, 29%, 14%);
+  color: #19212e;
   font-weight: 500;
-  opacity: 0.6;
-  font-size: 19px;
-  line-height: 1.4;
+  opacity: var(--low-opacity);
+  font-size: 19.5px;
+  line-height: var(--main-line-height);
 }
 .jeanette {
   background-color: #ffffff;
-  padding: 40px 50px;
   grid-column: 1 / span 1;
-  border-radius: 6px;
-}
-.jeanette img {
-  border: 4px solid rgba(159, 158, 158, 0.411);
 }
 .jeanette h3 {
   color: hsl(219, 29%, 14%);
   font-weight: 600;
-  opacity: 0.8;
+  opacity: var(--high-opacity);
 }
+.jeanette img {
+  border: 4px solid rgba(159, 158, 158, 0.411);
+}
+
 .jeanette h5 {
   color: hsl(219, 29%, 14%);
   font-weight: 500;
   margin-bottom: 14px;
-  opacity: 0.6;
+  opacity: var(--low-opacity);
 }
 .jeanette .first-p.dark-p {
   color: hsl(219, 29%, 14%);
   font-weight: 600;
-  opacity: 0.8;
+  opacity: var(--high-opacity);
   margin-bottom: 16px;
   font-size: 30px;
-  line-height: 1.4;
+  line-height: var(--main-line-height);
 }
 .jeanette .second-p.dark-p {
   color: hsl(219, 29%, 14%);
   font-weight: 500;
   margin-bottom: 20px;
-  opacity: 0.6;
-  font-size: 19px;
-  line-height: 1.4;
+  opacity: var(--low-opacity);
 }
 .patrick {
   background-color: #191f2d;
-  padding: 40px 50px;
   grid-column: 2 / span 2;
-  border-radius: 6px;
 }
 .patrick .first-p.light-p {
-  opacity: 0.8;
-  margin-bottom: 40px;
-  line-height: 1.4;
-}
-.patrick .second-p.light-p {
-  opacity: 0.6;
-  line-height: 1.4;
+  opacity: var(--high-opacity);
+  line-height: var(--main-line-height);
 }
 
 .patrick img {
