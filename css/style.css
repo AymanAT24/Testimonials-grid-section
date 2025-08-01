@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  box-shadow: 15px 15px 15px #0000001c;
 }
 .daniel {
   grid-column: 1 / span 2;
